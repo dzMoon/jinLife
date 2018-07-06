@@ -1,0 +1,27 @@
+<!--pages/IDCard/IDCard.wxml-->
+<view>
+  <view class="pages-box">
+    <!--  提示文字  -->
+    <view class="fs32 fc99">
+      请输入您的订单编号
+    </view>
+    <!--  搜索框  -->
+    <view class="inp-box">
+      <input class="inp" bindinput="orderNumber" placeholder="订单编号" placeholder-style="font-size:30rpx" maxlength='18'/>
+      <view class="inpimg">
+        <image src="../../images/search.png" class="pagesimg" />
+      </view>
+    </view>
+    <!--  提交按钮  -->
+    <view class="btn-box">
+      <button class="btn fs32" bindtap="getdata">
+        查 询
+      </button>
+    </view>
+
+  </view>
+  <!--  详细信息  -->
+  <block wx:if="{{show}}">
+    <view>{{getdata}}</view>
+  </block>
+</view>
