@@ -1,1 +1,41 @@
 /* pages/kuaidi/index.wxss */
+
+.time {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+}
+
+.context {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+}
+
+.container {
+  padding: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+.box {
+  padding-left: 50rpx;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+.box::before {
+  content: '';
+  display: block;
+  width: 20rpx;
+  height: 20rpx;
+  border: 1px solid #50c1e9;
+  border-radius: 50%;
+  position: absolute;
+  left: 10rpx;
+  top: 20rpx;
+}

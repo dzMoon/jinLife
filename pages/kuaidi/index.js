@@ -1,51 +1,81 @@
 const utils = require('../../utils/util.js')
+const WxParse = require('../wxParse/wxParse.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    orderNumber: '73959556900',
+    orderNumber: '',
     getdata: '',
-    show: false
+    show: false,
+    spellName: '',
+    name: '',
+    showHistory: false,
+    array: [
+      { name: '京东', spellName: 'jd' },
+      { name: '申通', spellName: 'shentong' },
+      { name: 'EMS', spellName: 'ems' },
+      { name: '顺丰', spellName: 'shunfeng' },
+      { name: '圆通', spellName: 'yuantong' },
+      { name: '中通', spellName: 'zhongtong' },
+      { name: '韵达', spellName: 'yunda' },
+      { name: '天天', spellName: 'tiantian' },
+      { name: '汇通', spellName: 'huitongkuaidi' },
+      { name: '全峰', spellName: 'quanfengkuaidi' },
+      { name: '德邦', spellName: 'debangwuliu' },
+      { name: '宅急送', spellName: 'zhaijisong' }
+    ],
+    history: []
   },
   orderNumber: function (e) {
     this.setData({
       orderNumber: e.detail.value
     })
   },
-
+  bindPickerChange: function (e) {
+    const that = this
+    this.setData({
+      spellName: that.data.array[Number(e.detail.value)].spellName,
+      name: that.data.array[Number(e.detail.value)].name
+    })
+  },
   getdata: function () {
-    var that = this;
+    const that = this;
     wx.showLoading({
       title: '加载中',
     });
-    var orderNumber = this.data.orderNumber;
-    if (!utils.isOrderNumber(orderNumber)) { return; }
-    // 请求数据
+    const orderNumber = this.data.orderNumber
+    const type = this.data.name
+    if (!utils.isOrderNumber(orderNumber, type)) { return }
     wx.request({
-      url: "http://m.kuaidihelp.com/express/queryResult?word=" + orderNumber,
+      url: `http://www.kuaidi100.com/query?type=${that.data.spellName}&postid= + ${orderNumber}`,
+      method: 'GET',
       data: {
       },
       header: {
-        'content-type': 'application/json' // 默认值
+        'content-type': 'application/json'
       },
-      method: 'GET',
       success: function (res) {
-        console.log(res)
         wx.hideLoading();
-        that.setData({
-          show: true,
-          getdata: res.data
-        })
-      },
-      fail: function (err) {
-        wx.hideLoading();
-        wx.showModal({
-          title: '错误信息',
-          content: err.errMsg,
-          showCancel: false
-        })
+        console.log(res.data.data)
+        if (res.data.data.length == 0) {
+          wx.showModal({
+            title: '错误提示',
+            content: res.data.message,
+            showCancel: false
+          })
+          that.setData({
+            history: [],
+            showHistory: false
+          })
+
+        } else {
+          that.setData({
+            history: res.data.data,
+            showHistory: true
+          })
+        }
       }
     })
   },
