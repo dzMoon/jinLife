@@ -9,8 +9,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.6.4",
-	"appid": "touristappid",
-	"projectname": "%E8%B4%B4%E8%BA%AB%E7%AE%A1%E5%AE%B6",
+	"appid": "wx7964f432c717da43",
+	"projectname": "jinLife",
 	"condition": {
 		"search": {
 			"current": -1,

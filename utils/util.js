@@ -91,7 +91,7 @@ const isBankCard = bankCard => {
 }
 
 /* 订单号校验 */
-const isOrderNumber = isOrderNumber => {
+const isOrderNumber = (isOrderNumber, type) => {
   if (isOrderNumber == "") {
     wx.showToast({
       title: '请填写订单标号',
@@ -100,10 +100,19 @@ const isOrderNumber = isOrderNumber => {
       duration: 2000
     })
     return false;
-  }else {
-    return true
+  } else {
+    if (type == "") {
+      wx.showToast({
+        title: '请选择快递公司',
+        icon: 'none',
+        image: '../../images/error.png',
+        duration: 2000
+      })
+      return false
+    } else {
+      return true
+    }
   }
- 
 }
 module.exports = {
   formatTime: formatTime,

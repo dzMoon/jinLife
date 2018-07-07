@@ -1,5 +1,6 @@
 <!--pages/IDCard/IDCard.wxml-->
 <view>
+
   <view class="pages-box">
     <!--  提示文字  -->
     <view class="fs32 fc99">
@@ -7,10 +8,18 @@
     </view>
     <!--  搜索框  -->
     <view class="inp-box">
-      <input class="inp" bindinput="orderNumber" placeholder="订单编号" placeholder-style="font-size:30rpx" maxlength='18'/>
+      <input class="inp" bindinput="orderNumber" placeholder="请输入订单编号" placeholder-style="font-size:30rpx" maxlength='18' />
       <view class="inpimg">
         <image src="../../images/search.png" class="pagesimg" />
       </view>
+    </view>
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+        <!-- range-key指定数组对象中将要展示的值  value代表数组值  -->
+        <view class="picker" style="border:1px solid #50c1e9;border-radius:10rpx;text-indent:20rpx;margin-top:20rpx;line-height:2.4;font-size:14px;">
+          <text style="color:#999;">快递选择：{{name}}</text>
+        </view>
+      </picker>
     </view>
     <!--  提交按钮  -->
     <view class="btn-box">
@@ -21,7 +30,14 @@
 
   </view>
   <!--  详细信息  -->
-  <block wx:if="{{show}}">
-    <view>{{getdata}}</view>
-  </block>
+  <view class="container">
+
+    <block wx:for="{{history}}" wx:key="{{item.time}}" wx:if="{{showHistory}}">
+      <view class="box">
+
+        <view class="time">送货时间： {{item.time}}</view>
+        <view class="context">快递信息： {{item.context}}</view>
+      </view>
+    </block>
+  </view>
 </view>
