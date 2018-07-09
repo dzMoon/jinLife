@@ -3,7 +3,7 @@
   <view>{{refreshTime}}</view>
 </view>
 
-<scroll-view class="log-list" style="height: 400rpx" scroll-y="true" bindscrolltoupper="refresh" bindscrolltolower="loadMore">
+<scroll-view class="log-list"  scroll-y="true" bindscrolltoupper="refresh" bindscrolltolower="loadMore">
   <view class="item" wx:for="{{history}}" wx:key="index">
       <text class="log-item">{{index + 1}}. {{item}}</text>
   </view>

@@ -11,7 +11,6 @@ Page({
     refreshTime: '', // 刷新的时间 
     hideHeader: true,
     hideBottom: true,
-    refreshTime: '',
     page:10,
     allPages: '',    // 总页数
     currentPage: 1,  // 当前页数  默认是1
@@ -51,6 +50,35 @@ Page({
       })
     }, 500)
     
+  },
+  onPullDownRefresh: function () {
+    const that = this
+    let date = new Date();
+    wx.startPullDownRefresh({
+      success: function() {
+        that.setData({
+          hideBottom: false,
+          refreshTime: date.toLocaleTimeString()
+        })
+      },
+      fail: function() {
+
+      }
+      
+    })
+
+    wx.stopPullDownRefresh({
+      success:function() {
+        that.setData({
+          hideBottom: true,
+        })
+      },
+      fail: function() {
+        that.setData({
+          hideBottom: true,
+        })
+      }
+    })
   },
   getData: function () {
     var self = this;
