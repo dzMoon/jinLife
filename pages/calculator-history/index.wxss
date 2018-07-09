@@ -22,3 +22,8 @@
 #green, #red, #yellow, #blue {
   height: 100%;
 }
+.header , .bottom{
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}

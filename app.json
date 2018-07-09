@@ -16,7 +16,7 @@
     "navigationBarTitleText": "晋生活",
     "navigationBarBackgroundColor": "#fbf9fe",
     "backgroundColor": "#fbf9fe",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": true 
   },
   "tabBar": {
     "color": "#999999",

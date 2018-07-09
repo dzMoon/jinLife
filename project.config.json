@@ -7,9 +7,6 @@
     "minified": true,
     "newFeature": true
   },
-  "window": {
-    "enablePullDownRefresh": true
-  },
   "compileType": "miniprogram",
   "libVersion": "1.6.4",
   "appid": "wx7964f432c717da43",
