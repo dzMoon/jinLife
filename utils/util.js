@@ -114,10 +114,44 @@ const isOrderNumber = (isOrderNumber, type) => {
     }
   }
 }
+
+/* 手机号校验 */
+const isMobile = mobile => {
+  if (mobile == "") {
+    wx.showToast({
+      title: '请填写手机号',
+      icon: 'none',
+      image: '../../images/error.png',
+      duration: 2000
+    })
+    return false;
+  }
+  if (mobile.length != 11) {
+    wx.showToast({
+      title: '手机号格式错误',
+      icon: 'none',
+      image: '../../images/error.png',
+      duration: 2000
+    })
+    return false;
+  }
+  let valid_rule = /^(13[0-9]|14[5-9]|15[012356789]|166|17[0-8]|18[0-9]|19[8-9])[0-9]{8}$/ //正则表达式
+  if (!valid_rule.test(mobile)) {
+    wx.showToast({
+      title: '手机号格式错误',
+      icon: 'none',
+      image: '../../images/error.png',
+      duration: 2000
+    })
+    return false;
+  }
+  return true;
+}
 module.exports = {
   formatTime: formatTime,
   isIDCard: isIDCard,
   isBankCard: isBankCard,
   isIP: isIP,
-  isOrderNumber: isOrderNumber
+  isOrderNumber: isOrderNumber,
+  isMobile: isMobile
 }

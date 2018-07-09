@@ -1,5 +1,4 @@
 const utils = require('../../utils/util.js')
-const WxParse = require('../wxParse/wxParse.js');
 Page({
 
   /**

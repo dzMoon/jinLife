@@ -8,13 +8,15 @@
     "pages/calculator/index",
     "pages/calculator-history/index",
     "pages/ipAddress/index",
-    "pages/kuaidi/index"
+    "pages/kuaidi/index",
+    "pages/mobileAddress/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "晋生活",
     "navigationBarBackgroundColor": "#fbf9fe",
-    "backgroundColor": "#fbf9fe"
+    "backgroundColor": "#fbf9fe",
+    "enablePullDownRefresh": true 
   },
   "tabBar": {
     "color": "#999999",

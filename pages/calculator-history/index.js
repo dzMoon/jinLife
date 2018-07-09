@@ -11,46 +11,10 @@ Page({
     refreshTime: '', // 刷新的时间 
     hideHeader: true,
     hideBottom: true,
-    refreshTime: '',
-    page:10,
+    page: 18,
     allPages: '',    // 总页数
     currentPage: 1,  // 当前页数  默认是1
-    loadMoreData: '加载更多……'
-  },
-  refresh: function () {
-    console.log(1)
-    let date = new Date();
-    this.setData({
-      hideHeader: false,
-      refreshTime: date.toLocaleTimeString()
-    })
-    const that = this;
-    setTimeout(function () {
-      that.setData({
-        currentPage: 1,
-        page: 10,
-        hideHeader: true,
-        history: wx.getStorageSync('history').slice(0, that.data.page)
-      })
-    }, 500);
-  },
-  loadMore: function () {
-    console.log(2)
-    const that = this
-    let date = new Date();
-    this.setData({
-      refreshTime: date.toLocaleTimeString(),
-      hideBottom: false
-    })
-    setTimeout(function(){
-      that.setData({
-        hideBottom: true,
-        currentPage: that.data.currentPage + 1,
-        page: that.data.page * that.data.currentPage,
-        history: wx.getStorageSync('history').slice(0, that.data.page)
-      })
-    }, 500)
-    
+    loadMoreData: '下拉刷新……'
   },
   getData: function () {
     var self = this;
@@ -123,14 +87,44 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    const that = this
+    const totalHistory = wx.getStorageSync('history')
+    let date = new Date()
 
+    that.setData({
+      hideBottom: false,
+      refreshTime: date.toLocaleTimeString(),
+      loadMoreData: '上拉刷新....'
+    })
+    setTimeout(function () {
+      that.setData({
+        hideBottom: true,
+        history: history = totalHistory.slice(0, that.data.page),
+        currentPage: 1
+      })
+    }, 3000)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    const that = this
+    const totalHistory = wx.getStorageSync('history')
+    let date = new Date()
+    let currentPage = that.data.currentPage + 1
+    that.setData({
+      hideBottom: false,
+      refreshTime: date.toLocaleTimeString(),
+      loadMoreData: '下拉加载...'
+    })
+    setTimeout(function () {
+      that.setData({
+        hideBottom: true,
+        history: history = that.data.history.lenghth < totalHistory.length ? totalHistory.slice(0, that.data.page * currentPage) : totalHistory,
+        currentPage: currentPage
+      })
+    }, 1000)
   },
 
   /**

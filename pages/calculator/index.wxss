@@ -5,6 +5,7 @@
 .hamm-box{
   padding: 10px;
   width:100%;
+  box-sizing:border-box;
 }
 .hamm-result{
   padding: 20rpx;
