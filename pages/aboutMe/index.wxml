@@ -1,0 +1,33 @@
+<!--pages/about/about.wxml-->
+<view class="abimgbox">
+  <view>
+    <image src="../../images/my.jpg" class="logoimg" />
+  </view>
+  <view class="fs30 logntext">
+    晋生活(小程序版)
+  </view>
+  <view class="mybbox">
+    <view class="mybox">
+      <view class="imgbox">
+        <image src="../../images/my.jpg" class="myimg"/>
+      </view>
+      <view class="textbox fs30 fcff">
+        <view>薛娇宏</view>
+        <view>此应用开发者</view>
+      </view>
+    </view>
+  </view>
+  <view class="ybbox">
+    <view class="linbox">
+      <view class="imgbox">
+        <image src="../../images/y.jpg" class="myimg"/>
+      </view>
+      <view class="textbox fs30 fcff">
+        <view>说明</view>
+        <view>此应用并非完全本人开发，除js逻辑，页面样式均来自小程序(贴身管家)</view>
+        <view>小程序属于自己学习使用，并未用于任何商业用途</view>
+      </view>
+    </view>
+  </view>
+
+</view>

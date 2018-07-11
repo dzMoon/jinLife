@@ -9,14 +9,16 @@
     "pages/calculator-history/index",
     "pages/ipAddress/index",
     "pages/kuaidi/index",
-    "pages/mobileAddress/index"
+    "pages/mobileAddress/index",
+    "pages/aboutMe/index",
+    "pages/weather/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "晋生活",
     "navigationBarBackgroundColor": "#fbf9fe",
     "backgroundColor": "#fbf9fe",
-    "enablePullDownRefresh": true 
+    "enablePullDownRefresh": false
   },
   "tabBar": {
     "color": "#999999",
@@ -31,13 +33,13 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/weather/weather",
+        "pagePath": "pages/weather/index",
         "iconPath": "images/tianqi1.png",
         "selectedIconPath": "images/tianqi.png",
         "text": "天气"
       },
       {
-        "pagePath": "pages/about/about",
+        "pagePath": "pages/aboutMe/index",
         "iconPath": "images/guanyu1.png",
         "selectedIconPath": "images/guanyu.png",
         "text": "关于"
