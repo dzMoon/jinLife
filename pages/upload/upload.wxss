@@ -1,0 +1,24 @@
+/* pages/upload/upload.wxss */
+image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.imgContainer{
+  float: left;
+  width: 200rpx;
+  height: 200rpx;
+  position: relative;
+}
+.close{
+  position: absolute;
+  right: 5rpx;
+  top: 5rpx;
+  background:#000;
+  color:#fff;
+  width: 30rpx;
+  height: 30rpx; 
+  border-radius: 50%;
+}
+.upload{
+  margin-top: 50rpx;
+}

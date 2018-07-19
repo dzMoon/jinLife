@@ -1,0 +1,30 @@
+<view class="score">
+{{score}}
+</view>
+<view class="container" bindtouchstart='moveStart' bindtouchmove='move' bindtouchend='moveEnd'>
+  <view class="rows">
+
+    <view>{{r1c1}}</view>
+    <view>{{r1c2}}</view>
+    <view>{{r1c3}}</view>
+    <view>{{r1c4}}</view>
+  </view>
+  <view class="rows">
+    <view>{{r2c1}}</view>
+    <view>{{r2c2}}</view>
+    <view>{{r2c3}}</view>
+    <view>{{r2c4}}</view>
+  </view>
+  <view class="rows">
+    <view>{{r3c1}}</view>
+    <view>{{r3c2}}</view>
+    <view>{{r3c3}}</view>
+    <view>{{r3c4}}</view>
+  </view>
+  <view class="rows">
+    <view>{{r4c1}}</view>
+    <view>{{r4c2}}</view>
+    <view>{{r4c3}}</view>
+    <view>{{r4c4}}</view>
+  </view>
+</view>

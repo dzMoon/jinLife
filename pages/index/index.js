@@ -17,11 +17,11 @@ Page({
       { img: '/images/EmptyBanner3.jpg', openpath: ''}
     ],
     server: [
-      {
-        img: "../../images/sfz.png",
-        openpath: "../../pages/IDCard/IDCard",
-        text: "身份证查询"
-      },
+      // {
+      //   img: "../../images/sfz.png",
+      //   openpath: "../../pages/IDCard/IDCard",
+      //   text: "身份证查询"
+      // },
       {
         img: "../../images/yhk.png",
         openpath: "../../pages/bankQuery/bankQuery",
@@ -48,9 +48,9 @@ Page({
         text: "五十音图"
       },
       {
-        img: "../../images/cha.png",
-        openpath: "../../pages/pinyin/index",
-        text: "查拼音"
+        img: "../../images/upload.png",
+        openpath: "../../pages/upload/upload",
+        text: "图片上传" 
       },
       {
         img: "../../images/clac.png",
@@ -71,14 +71,15 @@ Page({
         img: "../../images/kd.png",
         openpath: "../../pages/kuaidi/index",
         text: "全国快递"
-      }
-    ],
-    unserver: [
+      },
       {
         img: "../../images/2048.png",
         openpath: "../../pages/2048/2048",
         text: "2048"
-      },
+      }
+    ],
+    unserver: [
+      
       {
         img: "../../images/gj.png",
         openpath: "../../pages/",
@@ -88,6 +89,11 @@ Page({
         img: "../../images/gjj.png",
         openpath: "../../pages/",
         text: "公积金计算"
+      },
+      {
+        img: "../../images/cha.png",
+        openpath: "../../pages/pinyin/index",
+        text: "查拼音"
       },
       {
         img: "../../images/sl.png",
@@ -159,7 +165,18 @@ Page({
       }
     });
   },
-
-  
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '晋生活',
+      path: '/page/index'
+    }
+  }
 
 })

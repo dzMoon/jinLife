@@ -11,7 +11,10 @@
     "pages/kuaidi/index",
     "pages/mobileAddress/index",
     "pages/aboutMe/index",
-    "pages/weather/index"
+    "pages/weather/index",
+    "pages/2048/2048",
+    "pages/figure/figure",
+    "pages/upload/upload"
   ],
   "window": {
     "navigationBarTextStyle": "black",

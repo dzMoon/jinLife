@@ -1,0 +1,36 @@
+.rows {
+  width: 400rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.rows view {
+  width: 25%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border: 1px solid #000;
+  float:left;
+  box-sizing: border-box;
+}
+
+.container {
+  padding:0;
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+  width: 400rpx;
+  height: 400rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 1px solid #000;
+}
+.score{
+  position: fixed;
+  top:50rpx;
+  right:50rpx;
+}
