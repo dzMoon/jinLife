@@ -17,11 +17,6 @@ Page({
       { img: '/images/EmptyBanner3.jpg', openpath: ''}
     ],
     server: [
-      // {
-      //   img: "../../images/sfz.png",
-      //   openpath: "../../pages/IDCard/IDCard",
-      //   text: "身份证查询"
-      // },
       {
         img: "../../images/yhk.png",
         openpath: "../../pages/bankQuery/bankQuery",
@@ -43,9 +38,9 @@ Page({
         text: "身材计算"
       },
       {
-        img: "../../images/wsyt.png",
-        openpath: "../../pages/gojuuonn/gojuuonn",
-        text: "五十音图"
+        img: "../../images/cha.png",
+        openpath: "../../pages/cha/cha",
+        text: "查拼音"
       },
       {
         img: "../../images/upload.png",
@@ -79,7 +74,11 @@ Page({
       }
     ],
     unserver: [
-      
+      {
+        img: "../../images/wsyt.png",
+        openpath: "../../pages/gojuuonn/gojuuonn",
+        text: "五十音图"
+      },
       {
         img: "../../images/gj.png",
         openpath: "../../pages/",
@@ -90,11 +89,7 @@ Page({
         openpath: "../../pages/",
         text: "公积金计算"
       },
-      {
-        img: "../../images/cha.png",
-        openpath: "../../pages/pinyin/index",
-        text: "查拼音"
-      },
+      
       {
         img: "../../images/sl.png",
         openpath: "../../pages/",

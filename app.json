@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/IDCard/IDCard",
     "pages/bankQuery/bankQuery",
     "pages/cand/index",
     "pages/game/game",
@@ -14,7 +13,8 @@
     "pages/weather/index",
     "pages/2048/2048",
     "pages/figure/figure",
-    "pages/upload/upload"
+    "pages/upload/upload",
+    "pages/cha/cha"
   ],
   "window": {
     "navigationBarTextStyle": "black",
