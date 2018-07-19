@@ -1,9 +1,12 @@
 <view bindtap='upload' class="upload">
  <button class="btn fs32">上传照片</button>
 </view>
+<view class="img-wrapper">
+
 
 <view wx:for="{{imgList}}" wx:key="index" class="imgContainer">
   <view class='close' bindtap='delete' id="{{index}}">X</view>
   <image src='{{item}}'></image>
 </view>
 
+</view>
