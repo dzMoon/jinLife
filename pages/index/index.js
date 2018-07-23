@@ -42,11 +42,11 @@ Page({
         openpath: "../../pages/figure/figure",
         text: "身材计算"
       },
-      {
-        img: "../../images/cha.png",
-        openpath: "../../pages/cha/cha",
-        text: "查拼音"
-      },
+      // {
+      //   img: "../../images/cha.png",
+      //   openpath: "../../pages/cha/cha",
+      //   text: "查拼音"
+      // },
       {
         img: "../../images/upload.png",
         openpath: "../../pages/upload/upload",
