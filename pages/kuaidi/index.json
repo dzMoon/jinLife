@@ -1,1 +1,7 @@
-{}
+{
+  "navigationBarBackgroundColor": "#009be0",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "全国快递",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

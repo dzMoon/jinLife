@@ -18,6 +18,11 @@ Page({
     ],
     server: [
       {
+        img: "../../images/sfz.png",
+        openpath: "../../pages/IDCard/IDCard",
+        text: "身份证查询"
+      },
+      {
         img: "../../images/yhk.png",
         openpath: "../../pages/bankQuery/bankQuery",
         text: "银行查询"
@@ -37,11 +42,11 @@ Page({
         openpath: "../../pages/figure/figure",
         text: "身材计算"
       },
-      {
-        img: "../../images/cha.png",
-        openpath: "../../pages/cha/cha",
-        text: "查拼音"
-      },
+      // {
+      //   img: "../../images/cha.png",
+      //   openpath: "../../pages/cha/cha",
+      //   text: "查拼音"
+      // },
       {
         img: "../../images/upload.png",
         openpath: "../../pages/upload/upload",

@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+	"pages/IDCard/IDCard",
     "pages/bankQuery/bankQuery",
     "pages/cand/index",
     "pages/game/game",
