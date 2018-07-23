@@ -1,1 +1,7 @@
-{}
+{
+  "navigationBarBackgroundColor": "#009be0",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "图片上传",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

@@ -18,6 +18,11 @@ Page({
     ],
     server: [
       {
+        img: "../../images/sfz.png",
+        openpath: "../../pages/IDCard/IDCard",
+        text: "身份证查询"
+      },
+      {
         img: "../../images/yhk.png",
         openpath: "../../pages/bankQuery/bankQuery",
         text: "银行查询"
