@@ -17,11 +17,7 @@ Page({
       { img: '/images/EmptyBanner3.jpg', openpath: ''}
     ],
     server: [
-      {
-        img: "../../images/sfz.png",
-        openpath: "../../pages/IDCard/IDCard",
-        text: "身份证查询"
-      },
+      
       {
         img: "../../images/yhk.png",
         openpath: "../../pages/bankQuery/bankQuery",
@@ -42,11 +38,7 @@ Page({
         openpath: "../../pages/figure/figure",
         text: "身材计算"
       },
-      // {
-      //   img: "../../images/cha.png",
-      //   openpath: "../../pages/cha/cha",
-      //   text: "查拼音"
-      // },
+     
       {
         img: "../../images/upload.png",
         openpath: "../../pages/upload/upload",
@@ -73,16 +65,21 @@ Page({
         text: "全国快递"
       },
       {
+        img: "../../images/wsyt.png",
+        openpath: "../../pages/gojuuonn/gojuuonn",
+        text: "五十音图"
+      },
+      {
         img: "../../images/2048.png",
         openpath: "../../pages/2048/2048",
         text: "2048"
       }
     ],
     unserver: [
-      {
-        img: "../../images/wsyt.png",
-        openpath: "../../pages/gojuuonn/gojuuonn",
-        text: "五十音图"
+       {
+        img: "../../images/cha.png",
+        openpath: "../../pages/cha/cha",
+        text: "查拼音"
       },
       {
         img: "../../images/gj.png",
