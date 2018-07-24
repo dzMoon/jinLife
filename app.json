@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/bankQuery/bankQuery",
     "pages/cand/index",
+    "pages/IDCard/IDCard",
     "pages/game/game",
     "pages/calculator/index",
     "pages/calculator-history/index",

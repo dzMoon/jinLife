@@ -73,14 +73,20 @@ Page({
         img: "../../images/2048.png",
         openpath: "../../pages/2048/2048",
         text: "2048"
-      }
-    ],
-    unserver: [
-       {
+      },
+      {
         img: "../../images/cha.png",
         openpath: "../../pages/cha/cha",
         text: "查拼音"
       },
+      {
+        img: "../../images/sfz.png",
+        openpath: "../../pages/IDCard/IDCard",
+        text: "身份证查询"
+      }
+    ],
+    unserver: [
+      
       {
         img: "../../images/gj.png",
         openpath: "../../pages/",
